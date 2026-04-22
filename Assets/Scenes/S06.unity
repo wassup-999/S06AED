@@ -300,56 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41b2d79364ea314ca7df04af9ce4cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  spawner: {fileID: 674242881}
-  player: {fileID: 1348802723}
-  EnablePlayerTurn: 1
---- !u!1 &674242880
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 674242882}
-  - component: {fileID: 674242881}
-  m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &674242881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674242880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cada7f0bdf038648910d5940d2a13ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
-  EnemyPrefab: {fileID: 7584117877430138380, guid: ffec6e64d56a17e42abd7e2b1c78c709, type: 3}
-  range: 20
-  enemies: []
---- !u!4 &674242882
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674242880}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.28279, y: 0, z: 0.17704}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757063845
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +424,6 @@ GameObject:
   - component: {fileID: 1348802721}
   - component: {fileID: 1348802720}
   - component: {fileID: 1348802719}
-  - component: {fileID: 1348802723}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -578,22 +527,6 @@ Transform:
   - {fileID: 757063846}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1348802723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348802718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d16754ed49eaa8849acbc36a9274d496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player
-  str: 1
-  dtx: 1
-  spd: 1
-  MoveInput: {x: 0, y: 0}
 --- !u!1 &2051940375
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,5 +661,4 @@ SceneRoots:
   - {fileID: 349770884}
   - {fileID: 2051940378}
   - {fileID: 641896549}
-  - {fileID: 674242882}
   - {fileID: 1348802722}
