@@ -13,7 +13,8 @@ public class WindowManager : MyStack<Window>
     }
     public override Window Pop()
     {
-        OnElementRemoved?.Invoke(Peek());
+        if(Peek().window.activeSelf ==true )
+            OnElementRemoved?.Invoke(Peek());
         return base.Pop();
     }
 }

@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,8 +19,14 @@ public class UIGameManager : MonoBehaviour
         wmanager.OnElementAdded += OnElementAdded;
         wmanager.OnElementRemoved += OnElementRemoved;
     }
+    private void OnDisable()
+    {
+        inputs.Disable();
+        inputs.UI.Escape.performed -= HideCurrentPanel;
+        wmanager.OnElementAdded -= OnElementAdded;
+        wmanager.OnElementRemoved -= OnElementRemoved;
+    }
 
-    
 
     void Start()
     {
@@ -35,16 +42,24 @@ public class UIGameManager : MonoBehaviour
     private void OnElementAdded(Window window)
     {
         window.window.SetActive(true);
-            
+        Debug.Log("Activado");
+        
+
     }
 
     private void OnElementRemoved(Window window)
     {
+        
         window.window.SetActive(false);
+        Debug.Log("Desactivado");
+        
+        
     }
     private void HideCurrentPanel(InputAction.CallbackContext context)
     {
-        
+        //while
+        //re
+
     }
 
     public void BtnOpenPanel(GameObject panel)
@@ -52,4 +67,11 @@ public class UIGameManager : MonoBehaviour
         Window window = new(panel);
         wmanager.Push(window);
     }
+    [Button]
+    public void PeekFromStack()
+    {
+        Debug.Log(wmanager.Peek().window.name);
+    }
+    [Button]
+    public void Count() => Debug.Log(wmanager.Count);
 }
