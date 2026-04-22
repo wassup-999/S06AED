@@ -51,7 +51,11 @@ public class UIGameManager : MonoBehaviour
     {
         //while
         //re
-        wmanager.Pop();
+        while(wmanager.Count > 0 && wmanager.Peek().window.activeSelf == false)
+        {
+            wmanager.Pop();
+        }
+       // wmanager.Pop();
         
 
     }
