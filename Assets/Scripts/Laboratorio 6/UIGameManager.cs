@@ -31,18 +31,20 @@ public class UIGameManager : MonoBehaviour
     {
         
     }
-    private void HideCurrentPanel(InputAction.CallbackContext context)
-    {
-        
-    }
+    
     private void OnElementAdded(Window window)
     {
-        
+        window.window.SetActive(true);
+            
     }
 
     private void OnElementRemoved(Window window)
     {
-         
+        window.window.SetActive(false);
+    }
+    private void HideCurrentPanel(InputAction.CallbackContext context)
+    {
+        
     }
 
     public void BtnOpenPanel(GameObject panel)
