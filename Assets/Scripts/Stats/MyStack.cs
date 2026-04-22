@@ -7,7 +7,7 @@ public class MyStack <T>
     private int count;
     #endregion
     #region Public Methods
-    public void Push(T value)
+    public virtual void Push(T value)
     {
         StackNode<T> newNode = new StackNode<T>(value);
         //-> caso pila vacia
@@ -23,7 +23,7 @@ public class MyStack <T>
        
         count++;
     }
-    public T Pop()
+    public virtual T Pop()
     {
         if (top == null) //return default; //-> verificar si lista esta vacia
             throw new System.Exception("Trying to Pop");
@@ -33,7 +33,7 @@ public class MyStack <T>
 
         return tempValue;
     }
-    public T Peek()
+    public virtual T Peek()
     {
         if (top == null) //return default;
         throw new System.Exception("Trying to peek a empty stack");
@@ -41,7 +41,7 @@ public class MyStack <T>
         T tempValue = top.Value;
         return tempValue;
     }
-    public void Clear()
+    public virtual void Clear()
     {
         top= null;
         count = 0;
