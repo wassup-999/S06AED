@@ -19,15 +19,7 @@ public class UIGameManager : MonoBehaviour
         wmanager.OnElementAdded += OnElementAdded;
         wmanager.OnElementRemoved += OnElementRemoved;
     }
-    private void OnDisable()
-    {
-        inputs.Disable();
-        inputs.UI.Escape.performed -= HideCurrentPanel;
-        wmanager.OnElementAdded -= OnElementAdded;
-        wmanager.OnElementRemoved -= OnElementRemoved;
-    }
-
-
+   
     void Start()
     {
         
@@ -59,6 +51,8 @@ public class UIGameManager : MonoBehaviour
     {
         //while
         //re
+        wmanager.Pop();
+        
 
     }
 
