@@ -44,7 +44,7 @@ public class UIGameManager : MonoBehaviour
     private void OnElementRemoved(Window window)
     {            
         window.window.SetActive(false);
-        //window.window.transform.SetAsFirstSibling();
+        window.window.transform.SetSiblingIndex(0);
  
         Debug.Log("Desactivado");
         
