@@ -16,6 +16,7 @@ public class UIGameManager : MonoBehaviour
     {
         inputs.Enable();
         inputs.UI.Escape.performed += HideCurrentPanel;
+        //inputs.UI.Escape.canceled += HideCurrentPanel;
         wmanager.OnElementAdded += OnElementAdded;
         wmanager.OnElementRemoved += OnElementRemoved;
     }
@@ -34,28 +35,29 @@ public class UIGameManager : MonoBehaviour
     private void OnElementAdded(Window window)
     {
         window.window.SetActive(true);
+        window.window.transform.SetSiblingIndex(3);        
         Debug.Log("Activado");
         
 
     }
 
     private void OnElementRemoved(Window window)
-    {
-        
+    {            
         window.window.SetActive(false);
+        //window.window.transform.SetAsFirstSibling();
+ 
         Debug.Log("Desactivado");
         
         
     }
     private void HideCurrentPanel(InputAction.CallbackContext context)
-    {
-        //while
-        //re
-        while(wmanager.Count > 0 && wmanager.Peek().window.activeSelf == false)
+    {       
+        while(wmanager.Count > 0 && wmanager.Peek().window.activeSelf == true )
         {
             wmanager.Pop();
         }
-       // wmanager.Pop();
+        
+        //wmanager.Pop();
         
 
     }
