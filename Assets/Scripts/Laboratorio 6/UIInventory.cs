@@ -15,9 +15,7 @@ public class UIInventory : MonoBehaviour
         SanityTxt.text = "Sanity : " + inventoryData.SanityPorcentage;
         StaminaTxt.text = "Stamina : " + inventoryData.StaminaPorcentage;
         NumberItemTxt.text = "Items : " + inventoryData.NumberOfItems;
-    }
-
-    // Update is called once per frame
+    }    
     void Update()
     {
         
