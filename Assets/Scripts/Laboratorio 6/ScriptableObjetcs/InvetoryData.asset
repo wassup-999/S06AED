@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de0976c7cdf69b4aa41a17de7a13e82, type: 3}
   m_Name: InvetoryData
   m_EditorClassIdentifier: Assembly-CSharp::InvetoryData
-  LifePorcentage: 
-  SanityPorcentage: 
-  StaminaPorcentage: 
-  NumberOfItems: 
+  LifePorcentage: 80%
+  SanityPorcentage: 40%
+  StaminaPorcentage: 100%
+  NumberOfItems: 39
